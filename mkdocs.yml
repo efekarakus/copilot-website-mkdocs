@@ -1,0 +1,33 @@
+site_name: AWS Copilot CLI
+site_description: 'Develop, Release and Operate Container Apps on AWS.'
+site_auth: 'AWS Copilot contributors.'
+repo_name: 'aws/copilot-cli'
+repo_url: 'https://github.com/aws/copilot-cli'
+copyright: 'Copyright &copy; 2020 Amazon'
+docs_dir: 'site/content'
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Documentation:
+    - Manifest:
+      - Load Balanced Web Service: docs/manifest/lb-web-service.md
+
+
+theme:
+  name: material
+  custom_dir: site/overrides
+  palette:
+    primary: white
+  font: false
+  icon:
+    logo: octicons/terminal-16
+  features:
+    - tabs
+    - instant
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences

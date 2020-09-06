@@ -1,0 +1,98 @@
+
+{% extends "main.html" %}
+
+<!-- Render hero under tabs -->
+{% block tabs %}
+  {{ super() }}
+
+  <!-- Additional styles for landing page -->
+<style>
+
+@media only screen and (max-width: 1220px) {
+  .md-header {
+    box-shadow: 0 0 .2rem rgba(0,0,0,.1),0 .2rem .4rem rgba(0,0,0,.2);
+    transition: color 250ms,background-color 250ms,box-shadow 250ms;
+  }
+}
+
+/* Hide main content for now */
+.md-content {
+  display: none;
+}
+
+/* Hide table of contents */
+@media screen and (min-width: 60em) {
+  .md-sidebar--secondary {
+    display: none;
+  }
+}
+
+/* Hide navigation */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary {
+    display: none;
+  }
+}
+
+.tx-hero {
+  max-width: 700px;
+  display: flex;
+  padding: .4rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.tx-hero h1 {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+  color: rgb(38, 38, 38);
+}
+.tx-hero p {
+  color: rgb(92, 92, 92);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.tx-hero__image {
+  max-width: 1000px;
+  min-width: 600px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+}
+</style>
+
+  <!-- Hero for landing page -->
+  <div class="md-container tx-hero">
+    <div class="md-grid md-typeset">
+      <div class="md-main__inner">
+        <div>
+          <h1>Your toolkit for containerized applications on AWS</h1>
+          <p>AWS Copilot is a command line interface that makes it easy for developers to <span class="em">build</span>, 
+            <span class="em">release</span>, and <span class="em">operate</span> production ready containerized applications on Amazon ECS and AWS Fargate.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="md-container">
+    <div class="tx-hero__image">
+      <img
+        src="assets/images/screen.png"
+        alt=""
+        draggable="false"
+      >
+    </div>
+  </div>
+
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+{% endblock %}
+
+<!-- Application footer -->
+{% block footer %}{% endblock %}
