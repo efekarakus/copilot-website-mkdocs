@@ -103,6 +103,12 @@
   letter-spacing: normal;
   padding: 88px 0px 116px;
 }
+
+.secondary-section .g .section.follow {
+  padding-top: 0px;
+}
+
+
 .secondary-section .g .section .component-wrapper {
   display: flex;
   -moz-box-align: center;
@@ -314,6 +320,7 @@
 
   <div class="md-container secondary-section">
     <div class="g">
+      <!-- Architecture as building blocks -->
       <div class="section">
         <div class="component-wrapper">
           <div class="first-column">
@@ -393,9 +400,89 @@
           </div>
         </div>
       </div>
-    </div>
 
+      <!-- Continuous delivery -->
+      <div class="section follow">
+        <div class="component-wrapper">
+          <div class="first-column">
+            <h3>Continuously deliver your application</h3>
+            <p>
+              Create multiple deployment <a href="docs/environments">environments</a>
+              to deploy your services to multiple AWS accounts and regions.
+            </p>
+          </div>
+          <div class="second-column">
+            <div class="image-wrapper">
+              <img
+                src="assets/images/copilot-env-init.png"
+                alt=""
+                draggable="false"
+              >
+            </div>
+          </div>
+        </div>
+        <div class="component-wrapper" style="display: block;">
+          <h4>Explore features</h4>
+
+          <!-- Arch as code -->
+          <div class="responsive-grid">
+            <a class="card-wrapper" href="docs/manifest/overview">
+              <div class="card">
+                <div class="logo">
+                  <span class="twemoji">
+                    {% include ".icons/octicons/file-code-24.svg" %}
+                  </span>
+                </div>
+                <div class="card-content">
+                  <h5>Architecture as code</h5>
+                  <p>
+                    Describe your services with high-level infrastructure patterns.
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <!-- Networking -->
+            <a class="card-wrapper" href="docs/service-discovery">
+              <div class="card">
+                <div class="logo">
+                  <span class="twemoji">
+                    {% include ".icons/fontawesome/solid/network-wired.svg" %}
+                  </span>
+                </div>
+                <div class="card-content">
+                  <h5>Networking</h5>
+                  <p>
+                    Internet-facing services share load balancers and service discovery is setup by default.
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <!-- Customize -->
+            <a class="card-wrapper" href="docs/addons">
+              <div class="card">
+                <div class="logo">
+                  <span class="twemoji">
+                    {% include ".icons/fontawesome/solid/puzzle-piece.svg" %}
+                  </span>
+                </div>
+                <div class="card-content">
+                  <h5>Customize</h5>
+                  <p>
+                    Integrate your services with any additional AWS resources.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
+    
+
 
 {% endblock %}
 
