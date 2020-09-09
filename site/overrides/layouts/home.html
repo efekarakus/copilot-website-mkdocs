@@ -124,6 +124,10 @@
   margin-bottom: 12px;
 }
 
+.secondary-section .g .section .component-wrapper h4 {
+  color: rgb(38, 38, 38);
+}
+
 .secondary-section .g .section .component-wrapper p {
   color: rgb(92, 92, 92);
   font-size: 18px;
@@ -174,6 +178,106 @@
     margin-bottom: 32px;
   }
 }
+
+.secondary-section .g .section .component-wrapper .responsive-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+@media screen and (min-width: 64rem) {
+  .secondary-section .g .section .component-wrapper .responsive-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.secondary-section .g .section .component-wrapper .responsive-grid a.card-wrapper {
+  text-decoration: none;
+  transition: none;
+  background: none;
+  padding: 0;
+}
+
+.secondary-section .g .section .component-wrapper .responsive-grid .card {
+  position: relative;
+  background-color:  #fff none repeat scroll 0% 0%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  -moz-box-align: center;
+  align-items: center;
+  height: 100%;
+  -moz-box-pack: start;
+  justify-content: flex-start;
+  box-shadow: rgba(0, 0, 0, 0.09) 0.3125rem 0.3125rem 0px -0.0625rem, rgba(0, 0, 0, 0.15) 0px 0.25rem 0.5rem 0px;
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+}
+@media screen and (min-width: 75rem) {
+  .secondary-section .g .section .component-wrapper .responsive-grid .card {
+    padding: 2rem 2.5rem;
+  }
+}
+@media screen and (min-width: 36rem) {
+  .secondary-section .g .section .component-wrapper .responsive-grid .card {
+    padding: 1rem 1.5rem;
+  }
+}
+
+.secondary-section .g .section .component-wrapper .responsive-grid .card .logo {
+  margin-right: 0.75rem;
+  width: 1.2rem;
+  min-width: 1.2rem;
+}
+
+.secondary-section .g .section .component-wrapper .responsive-grid .card .card-content {
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  width: 100%;
+}
+
+.secondary-section .g .section .component-wrapper .responsive-grid .card .card-content h5 {
+  color: rgb(61, 61, 61);
+  margin: 0;
+}
+
+.secondary-section .g .section .component-wrapper .responsive-grid .card .card-content p {
+  margin-top: 0.25em;
+  margin-bottom: 0;
+  color: rgb(92, 92, 92);
+  font-size: 0.65rem;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.secondary-section .g .section .component-wrapper .responsive-grid .card .card-content code {
+  background: rgba(0, 0, 0, 0.05) none repeat scroll 0% 0%;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+
+.component-wrapper span.em {
+  color: rgb(61, 61, 61);
+}
+
+.component-wrapper a {
+  transition: color 125ms;
+  color: rgb(61, 61, 61);
+  background: rgba(0, 0, 0, 0.05) none repeat scroll 0% 0%;
+  padding: 2px 6px;
+  margin: 0px 1px;
+  border-radius: 4px;
+  display: inline;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.component-wrapper a:hover {
+  color: var(--md-typeset-a-color);
+  background: var(--md-accent-fg-color--transparent);
+}
+
 </style>
 
   <!-- Hero for landing page -->
@@ -182,7 +286,7 @@
       <div class="md-main__inner">
         <div>
           <h1>Your toolkit for containerized applications on AWS</h1>
-          <p>AWS Copilot is a command line interface that makes it easy for developers to <span class="em">build</span>, 
+          <p>AWS Copilot is an open source command line interface that makes it easy for developers to <span class="em">build</span>, 
             <span class="em">release</span>, and <span class="em">operate</span> production ready containerized applications on Amazon ECS and AWS Fargate.
           </p>
           <a
@@ -213,12 +317,13 @@
       <div class="section">
         <div class="component-wrapper">
           <div class="first-column">
-            <h3>A user experience to build architectures</h3>
+            <h3>Architectures as building blocks</h3>
             <p>
-              Got a Dockerfile? Deploy your service to AWS with a single command. 
-              Copilot generates the infrastructure from your application's architecture.
-              Services that are internet-facing share the same load balancers and are integrated
-              with service discovery by default.
+              Copilot provides common service types: <a href="docs/services/lb-web/">Load Balanced Web Service</a>, 
+              <a href="docs/services/backend/">Backend Service</a> to quickly bootstrap your application with AWS best practices.
+              You provide your Dockerfile, which type of service best represents your architecture, and with a <span class="em">single
+              command</span> Copilot generates all the infrastructure. Focus your time on writing business logic instead
+              of connecting AWS resources.
             </p>
           </div>
           <div class="second-column">
@@ -229,6 +334,62 @@
                 draggable="false"
               >
             </div>
+          </div>
+        </div>
+        <div class="component-wrapper" style="display: block;">
+          <h4>Explore features</h4>
+
+          <!-- Arch as code -->
+          <div class="responsive-grid">
+            <a class="card-wrapper" href="docs/manifest/overview">
+              <div class="card">
+                <div class="logo">
+                  <span class="twemoji">
+                    {% include ".icons/octicons/file-code-24.svg" %}
+                  </span>
+                </div>
+                <div class="card-content">
+                  <h5>Architecture as code</h5>
+                  <p>
+                    Describe your services with high-level infrastructure patterns.
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <!-- Networking -->
+            <a class="card-wrapper" href="docs/service-discovery">
+              <div class="card">
+                <div class="logo">
+                  <span class="twemoji">
+                    {% include ".icons/fontawesome/solid/network-wired.svg" %}
+                  </span>
+                </div>
+                <div class="card-content">
+                  <h5>Networking</h5>
+                  <p>
+                    Internet-facing services share load balancers and service discovery is setup by default.
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <!-- Customize -->
+            <a class="card-wrapper" href="docs/addons">
+              <div class="card">
+                <div class="logo">
+                  <span class="twemoji">
+                    {% include ".icons/fontawesome/solid/puzzle-piece.svg" %}
+                  </span>
+                </div>
+                <div class="card-content">
+                  <h5>Customize</h5>
+                  <p>
+                    Integrate your services with any additional AWS resources.
+                  </p>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
