@@ -218,6 +218,10 @@
   box-shadow: rgba(0, 0, 0, 0.09) 0.3125rem 0.3125rem 0px -0.0625rem, rgba(0, 0, 0, 0.15) 0px 0.25rem 0.5rem 0px;
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
 }
+.secondary-section .g .section .component-wrapper .responsive-grid .card:hover {
+  box-shadow: rgba(0, 0, 0, 0.2) 0.3125rem 0.3125rem 0px -0.0625rem, rgba(0, 0, 0, 0.26) 0px 0.25rem 0.5rem 0px;
+}
+
 @media screen and (min-width: 75rem) {
   .secondary-section .g .section .component-wrapper .responsive-grid .card {
     padding: 2rem 2.5rem;
@@ -324,13 +328,15 @@
       <div class="section">
         <div class="component-wrapper">
           <div class="first-column">
-            <h3>Architectures as building blocks</h3>
+            <h3>Get started with architectures</h3>
             <p>
-              Copilot provides common service types: <a href="docs/services/lb-web/">Load Balanced Web Service</a>, 
-              <a href="docs/services/backend/">Backend Service</a> to quickly bootstrap your application with AWS best practices.
-              You provide your Dockerfile, which type of service best represents your architecture, and with a <span class="em">single
-              command</span> Copilot generates all the infrastructure. Focus your time on writing business logic instead
-              of connecting AWS resources.
+              Run a <span class="em">single command</span> to quickly get started with a containerized
+              application using best practices on AWS from a Dockerfile. 
+            </p>
+            <p>
+              Instead of modeling individual resources, Copilot provides common cloud architectures: <a href="docs/services/lb-web/">Load Balanced Web Service</a>, 
+              <a href="docs/services/backend/">Backend Service</a> and generates the necessary infrastructure from that. 
+              Focus your time on writing business logic instead of connecting AWS resources.
             </p>
           </div>
           <div class="second-column">
@@ -356,9 +362,9 @@
                   </span>
                 </div>
                 <div class="card-content">
-                  <h5>Architecture as code</h5>
+                  <h5>Manifests</h5>
                   <p>
-                    Describe your services with high-level infrastructure patterns.
+                    Describe your services with architecture-as-code.
                   </p>
                 </div>
               </div>
@@ -390,9 +396,9 @@
                   </span>
                 </div>
                 <div class="card-content">
-                  <h5>Customize</h5>
+                  <h5>Grow with Addons</h5>
                   <p>
-                    Integrate your services with any additional AWS resources.
+                    Integrate your services with databases or any other AWS resources.
                   </p>
                 </div>
               </div>
@@ -405,10 +411,12 @@
       <div class="section follow">
         <div class="component-wrapper">
           <div class="first-column">
-            <h3>Continuously deliver your application</h3>
+            <h3>Continous delivery</h3>
             <p>
-              Create multiple deployment <a href="docs/environments">environments</a>
-              to deploy your services to multiple AWS accounts and regions.
+              No need to worry about gluing Copilot commands in a script to create an automated release process.
+              Copilot provides commands to create multiple deployment <a href="docs/environments">environments</a> in separate AWS accounts and regions,
+              as well as creating an AWS CodePipeline <a href="docs/pipelines">pipeline</a> to build your container images, deploy your services, and 
+              run automated tests.
             </p>
           </div>
           <div class="second-column">
@@ -424,53 +432,53 @@
         <div class="component-wrapper" style="display: block;">
           <h4>Explore features</h4>
 
-          <!-- Arch as code -->
+          <!-- Environments -->
           <div class="responsive-grid">
-            <a class="card-wrapper" href="docs/manifest/overview">
+            <a class="card-wrapper" href="docs/concepts/environments">
               <div class="card">
                 <div class="logo">
                   <span class="twemoji">
-                    {% include ".icons/octicons/file-code-24.svg" %}
+                    {% include ".icons/octicons/copy-24.svg" %}
                   </span>
                 </div>
                 <div class="card-content">
-                  <h5>Architecture as code</h5>
+                  <h5>Environments</h5>
                   <p>
-                    Describe your services with high-level infrastructure patterns.
+                    Deploy to multiple AWS accounts and regions.
                   </p>
                 </div>
               </div>
             </a>
 
-            <!-- Networking -->
-            <a class="card-wrapper" href="docs/service-discovery">
+            <!-- Override -->
+            <a class="card-wrapper" href="docs/manifest/overview">
               <div class="card">
                 <div class="logo">
                   <span class="twemoji">
-                    {% include ".icons/fontawesome/solid/network-wired.svg" %}
+                    {% include ".icons/octicons/pencil-24.svg" %}
                   </span>
                 </div>
                 <div class="card-content">
-                  <h5>Networking</h5>
+                  <h5>Override per environment</h5>
                   <p>
-                    Internet-facing services share load balancers and service discovery is setup by default.
+                    Adjust your service settings per environments in the manifest.
                   </p>
                 </div>
               </div>
             </a>
 
             <!-- Customize -->
-            <a class="card-wrapper" href="docs/addons">
+            <a class="card-wrapper" href="docs/concepts/pipelines">
               <div class="card">
                 <div class="logo">
                   <span class="twemoji">
-                    {% include ".icons/fontawesome/solid/puzzle-piece.svg" %}
+                    {% include ".icons/aws/codepipeline-32.svg" %}
                   </span>
                 </div>
                 <div class="card-content">
-                  <h5>Customize</h5>
+                  <h5>Automated releases</h5>
                   <p>
-                    Integrate your services with any additional AWS resources.
+                    Create a continuous delivery pipeline with built-in commands.
                   </p>
                 </div>
               </div>
@@ -479,17 +487,75 @@
         </div>
       </div>
 
+      <!-- Operations -->
+      <div class="section follow">
+        <div class="component-wrapper">
+          <div class="first-column">
+            <h3>Operations is part of the workflow</h3>
+            <p>
+              Modeling, provisioning, and deploying services are only part of the application lifecycle for the developer. 
+              Copilot also supports workflows around troubleshooting and debugging to help when things go wrong. <a href="docs/commands/service/svc-logs/">Tail
+              your logs</a> or <a href="docs/commands/service/svc-status/">view the health</a> of your services 
+              from the comfort of your terminal.
+            </p>
+          </div>
+          <div class="second-column">
+            <div class="image-wrapper">
+              <img
+                src="assets/images/copilot-svc-status.png"
+                alt=""
+                draggable="false"
+              >
+            </div>
+          </div>
+        </div>
+        <div class="component-wrapper" style="display: block;">
+          <h4>Explore features</h4>
+
+          <!-- Tasks -->
+          <div class="responsive-grid">
+            <a class="card-wrapper" href="docs/concepts/tasks">
+              <div class="card">
+                <div class="logo">
+                  <span class="twemoji">
+                    {% include ".icons/aws/fargate-32.svg" %}
+                  </span>
+                </div>
+                <div class="card-content">
+                  <h5>Run tasks</h5>
+                  <p>
+                    Run one-off tasks for operational workloads.
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <a class="card-wrapper" href="docs/concepts/tasks">
+              <div class="card">
+                <div class="logo">
+                  <span class="twemoji">
+                    {% include ".icons/aws/cloudwatch-32.svg" %}
+                  </span>
+                </div>
+                <div class="card-content">
+                  <h5>Monitoring</h5>
+                  <p>
+                    View logs or alarms from your services or tasks.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-    
-
-
 {% endblock %}
 
 <!-- Content -->
-{% block content %}
-{% endblock %}
+{% block content %}{% endblock %}
 
 <!-- Application footer -->
 {% block footer %}
+  {{ super() }}
 {% endblock %}
