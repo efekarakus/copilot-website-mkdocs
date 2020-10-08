@@ -23,6 +23,7 @@ theme:
   font: false
   icon:
     logo: octicons/terminal-16
+  favicon: assets/images/cli.png
   features:
     - tabs
     - instant
