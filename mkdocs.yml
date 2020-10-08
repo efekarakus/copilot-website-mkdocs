@@ -31,6 +31,40 @@ nav:
       - Service Discovery: docs/developing/service-discovery.md
       - Additional AWS Resources: docs/developing/additional-aws-resources.md
       - Sidecars: docs/developing/sidecars.md
+    - Commands:
+      - Getting Started:
+        - init: docs/commands/init.md
+        - docs: docs/commands/docs.md
+      - Develop:
+        - app init: docs/commands/app-init.md
+        - app ls: docs/commands/app-ls.md
+        - app show: docs/commands/app-show.md
+        - app delete: docs/commands/app-delete.md
+        - env init: docs/commands/env-init.md
+        - env ls: docs/commands/env-ls.md
+        - env show: docs/commands/env-show.md
+        - env delete: docs/commands/env-delete.md
+        - svc init: docs/commands/svc-init.md
+        - svc ls: docs/commands/svc-ls.md
+        - svc show: docs/commands/svc-show.md
+        - svc logs: docs/commands/svc-logs.md
+        - svc status: docs/commands/svc-status.md
+        - svc package: docs/commands/svc-package.md
+        - svc deploy: docs/commands/svc-deploy.md
+        - svc delete: docs/commands/svc-delete.md
+        - task run: docs/commands/task-run.md
+      - Release:
+        - pipeline init: docs/commands/pipeline-init.md
+        - pipeline update: docs/commands/pipeline-update.md
+        - pipeline show: docs/commands/pipeline-show.md
+        - pipeline status: docs/commands/pipeline-status.md
+        - pipeline delete: docs/commands/pipeline-delete.md
+        - deploy: docs/commands/deploy.md
+      - Addons:
+        - storage init: docs/commands/storage-init.md
+      - Settings:
+        - version: docs/commands/version.md
+        - completion: docs/commands/completion.md
 
 
 theme:
