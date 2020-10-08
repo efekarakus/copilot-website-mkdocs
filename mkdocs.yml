@@ -1,6 +1,5 @@
 site_name: AWS Copilot CLI
 site_description: 'Develop, Release and Operate Container Apps on AWS.'
-site_auth: 'AWS Copilot contributors.'
 repo_name: 'aws/copilot-cli'
 repo_url: 'https://github.com/aws/copilot-cli'
 copyright: 'Copyright &copy; 2020 Amazon'
@@ -11,8 +10,20 @@ extra_css:
 nav:
   - Home: index.md
   - Documentation:
+    - Overview: docs/overview.md
+    - Installing: docs/installing.md
+    - Getting Started: docs/getting-started.md
+    - Concepts:
+      - Overview: docs/concepts/overview.md
+      - Services: docs/concepts/services.md
+      - Environments: docs/concepts/environments.md
+      - Applications: docs/concepts/applications.md
+      - Pipelines: docs/concepts/pipelines.md
+    - Credentials: docs/credentials.md
     - Manifest:
+      - Overview: docs/manifest/overview.md
       - Load Balanced Web Service: docs/manifest/lb-web-service.md
+      - Backend Service: docs/manifest/backend-service.md
 
 
 theme:
@@ -32,6 +43,7 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.tabbed
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
