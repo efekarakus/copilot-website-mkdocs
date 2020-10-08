@@ -1,7 +1,10 @@
 This section explains our recommendations around credentials to provide the best experience with the AWS Copilot CLI.
 
 ## Application credentials
-Copilot uses the AWS credentials from the [default credential provider chain](https://docs.aws.amazon.com/sdk-for-go/v1/developer-guide/configuring-sdk.html#specifying-credentials) to store and look up your [application's metadata](https://github.com/aws/copilot-cli/wiki/Applications): which services and environments belong to it. We **recommend using a [named profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html)** to store your application's credentials. 
+Copilot uses the AWS credentials from the [default credential provider chain](https://docs.aws.amazon.com/sdk-for-go/v1/developer-guide/configuring-sdk.html#specifying-credentials) to store and look up your [application's metadata](https://github.com/aws/copilot-cli/wiki/Applications): which services and environments belong to it. 
+
+!!! tip
+    We **recommend using a [named profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html)** to store your application's credentials. 
 
 The most convenient way is having the `[default]` profile point to your application's credentials:
 ```ini
@@ -25,7 +28,9 @@ region=us-west-2
 $ export AWS_PROFILE=my-app
 $ copilot deploy
 ```
-We **do not** recommend using the environment variables: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_SESSION_TOKEN` directly to look up your application's metadata because if they're overridden or expired then Copilot will not be able to look up your services or environments. 
+
+!!! caution
+    We **do not** recommend using the environment variables: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_SESSION_TOKEN` directly to look up your application's metadata because if they're overridden or expired then Copilot will not be able to look up your services or environments. 
 
 To learn more on all the supported `config` file settings: [Configuration and credential file settings](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html#cli-configure-files-settings).
 

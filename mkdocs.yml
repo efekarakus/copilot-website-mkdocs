@@ -24,6 +24,13 @@ nav:
       - Overview: docs/manifest/overview.md
       - Load Balanced Web Service: docs/manifest/lb-web-service.md
       - Backend Service: docs/manifest/backend-service.md
+      - Pipeline: docs/manifest/pipeline.md
+    - Developing:
+      - Environment Variables: docs/developing/environment-variables.md
+      - Secrets: docs/developing/secrets.md
+      - Service Discovery: docs/developing/service-discovery.md
+      - Additional AWS Resources: docs/developing/additional-aws-resources.md
+      - Sidecars: docs/developing/sidecars.md
 
 
 theme:
