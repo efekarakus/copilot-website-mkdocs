@@ -2,6 +2,7 @@ site_name: AWS Copilot CLI
 site_description: 'Develop, Release and Operate Container Apps on AWS.'
 repo_name: 'aws/copilot-cli'
 repo_url: 'https://github.com/aws/copilot-cli'
+edit_uri: 'edit/mainline/site'
 copyright: 'Copyright &copy; 2020 Amazon'
 docs_dir: 'site/content'
 extra_css:
