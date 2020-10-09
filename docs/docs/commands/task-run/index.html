@@ -907,54 +907,6 @@
     Example
   </a>
   
-    <nav class="md-nav" aria-label="Example">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#run-a-task-using-your-local-dockerfile" class="md-nav__link">
-    Run a task using your local Dockerfile.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#run-a-task-named-db-migrate-in-the-test-environment-under-the-current-workspace" class="md-nav__link">
-    Run a task named "db-migrate" in the "test" environment under the current workspace.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#run-4-tasks-with-2gb-memory-an-existing-image-and-a-custom-task-role" class="md-nav__link">
-    Run 4 tasks with 2GB memory, an existing image, and a custom task role.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#run-a-task-with-environment-variables" class="md-nav__link">
-    Run a task with environment variables.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#run-a-task-using-the-current-workspace-with-specific-subnets-and-security-groups" class="md-nav__link">
-    Run a task using the current workspace with specific subnets and security groups.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#run-a-task-with-a-command" class="md-nav__link">
-    Run a task with a command.
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -1207,54 +1159,6 @@
     Example
   </a>
   
-    <nav class="md-nav" aria-label="Example">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#run-a-task-using-your-local-dockerfile" class="md-nav__link">
-    Run a task using your local Dockerfile.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#run-a-task-named-db-migrate-in-the-test-environment-under-the-current-workspace" class="md-nav__link">
-    Run a task named "db-migrate" in the "test" environment under the current workspace.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#run-4-tasks-with-2gb-memory-an-existing-image-and-a-custom-task-role" class="md-nav__link">
-    Run 4 tasks with 2GB memory, an existing image, and a custom task role.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#run-a-task-with-environment-variables" class="md-nav__link">
-    Run a task with environment variables.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#run-a-task-using-the-current-workspace-with-specific-subnets-and-security-groups" class="md-nav__link">
-    Run a task using the current workspace with specific subnets and security groups.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#run-a-task-with-a-command" class="md-nav__link">
-    Run a task with a command.
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -1269,7 +1173,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/aws/copilot-cli/edit/master/docs/docs/commands/task-run.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/aws/copilot-cli/edit/mainline/site/docs/commands/task-run.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -1326,19 +1230,25 @@
 </code></pre></div>
 
 <h2 id="example">Example</h2>
-<h4 id="run-a-task-using-your-local-dockerfile">Run a task using your local Dockerfile.</h4>
-<p>You will be prompted to specify a task group name and an environment for the tasks to run in.</p>
-<p><code>$ copilot task run --follow</code></p>
-<h4 id="run-a-task-named-db-migrate-in-the-test-environment-under-the-current-workspace">Run a task named "db-migrate" in the "test" environment under the current workspace.</h4>
-<p><code>$ copilot task run -n db-migrate --env test --follow</code></p>
-<h4 id="run-4-tasks-with-2gb-memory-an-existing-image-and-a-custom-task-role">Run 4 tasks with 2GB memory, an existing image, and a custom task role.</h4>
-<p><code>$ copilot task run --num 4 --memory 2048 --image=rds-migrate --task-role migrate-role --follow</code></p>
-<h4 id="run-a-task-with-environment-variables">Run a task with environment variables.</h4>
-<p><code>$ copilot task run --env-vars name=myName,user=myUser</code></p>
-<h4 id="run-a-task-using-the-current-workspace-with-specific-subnets-and-security-groups">Run a task using the current workspace with specific subnets and security groups.</h4>
-<p><code>$ copilot task run --subnets subnet-123,subnet-456 --security-groups sg-123,sg-456</code></p>
-<h4 id="run-a-task-with-a-command">Run a task with a command.</h4>
-<p><code>$ copilot task run --command "python migrate-script.py"</code></p>
+<p>Run a task using your local Dockerfile. 
+You will be prompted to specify a task group name and an environment for the tasks to run in.
+<div class="highlight"><pre><span></span><code>$ copilot task run --follow
+</code></pre></div></p>
+<p>Run a task named "db-migrate" in the "test" environment under the current workspace.
+<div class="highlight"><pre><span></span><code>$ copilot task run -n db-migrate --env test --follow
+</code></pre></div></p>
+<p>Run 4 tasks with 2GB memory, an existing image, and a custom task role.
+<div class="highlight"><pre><span></span><code>$ copilot task run --num 4 --memory 2048 --image=rds-migrate --task-role migrate-role --follow
+</code></pre></div></p>
+<p>Run a task with environment variables.
+<div class="highlight"><pre><span></span><code>$ copilot task run --env-vars name=myName,user=myUser
+</code></pre></div></p>
+<p>Run a task using the current workspace with specific subnets and security groups.
+<div class="highlight"><pre><span></span><code>$ copilot task run --subnets subnet-123,subnet-456 --security-groups sg-123,sg-456
+</code></pre></div></p>
+<p>Run a task with a command.
+<div class="highlight"><pre><span></span><code>$ copilot task run --command &quot;python migrate-script.py&quot;
+</code></pre></div></p>
                 
               
               

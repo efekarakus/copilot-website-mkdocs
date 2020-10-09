@@ -527,8 +527,8 @@
               application using best practices on AWS from a Dockerfile. 
             </p>
             <p>
-              Instead of modeling individual resources, Copilot provides common cloud architectures: <a href="docs/services/lb-web/">Load Balanced Web Service</a>, 
-              <a href="docs/services/backend/">Backend Service</a> and generates the necessary infrastructure from that. 
+              Instead of modeling individual resources, Copilot provides common cloud architectures: <a href="docs/concepts/services/#load-balanced-web-service">Load Balanced Web Service</a>, 
+              <a href="docs/concepts/services/#backend-service">Backend Service</a> and generates the necessary infrastructure from that. 
               Focus your time on writing business logic instead of connecting AWS resources.
             </p>
           </div>
@@ -564,7 +564,7 @@
             </a>
 
             <!-- Networking -->
-            <a class="card-wrapper" href="docs/service-discovery">
+            <a class="card-wrapper" href="docs/developing/service-discovery">
               <div class="card">
                 <div class="logo">
                   <span class="twemoji">
@@ -574,14 +574,14 @@
                 <div class="card-content">
                   <h5>Networking</h5>
                   <p>
-                    Internet-facing services share load balancers and service discovery is setup by default.
+                    Service discovery is setup by default for your services to connect to each other.
                   </p>
                 </div>
               </div>
             </a>
 
             <!-- Customize -->
-            <a class="card-wrapper" href="docs/addons">
+            <a class="card-wrapper" href="docs/developing/additional-aws-resources/">
               <div class="card">
                 <div class="logo">
                   <span class="twemoji">
@@ -607,8 +607,8 @@
             <h3>Continous delivery</h3>
             <p>
               No need to worry about gluing Copilot commands in a script to create an automated release process.
-              Copilot provides commands to create multiple deployment <a href="docs/environments">environments</a> in separate AWS accounts and regions,
-              as well as creating an AWS CodePipeline <a href="docs/pipelines">pipeline</a> to build your container images, deploy your services, and 
+              Copilot provides commands to create multiple deployment <a href="docs/concepts/environments/">environments</a> in separate AWS accounts and regions,
+              as well as creating an AWS CodePipeline <a href="docs/concepts/pipelines/">pipeline</a> to build your container images, deploy your services, and 
               run automated tests.
             </p>
           </div>
@@ -627,7 +627,7 @@
 
           <!-- Environments -->
           <div class="responsive-grid">
-            <a class="card-wrapper" href="docs/concepts/environments">
+            <a class="card-wrapper" href="docs/commands/env-init/">
               <div class="card">
                 <div class="logo">
                   <span class="twemoji">
@@ -644,7 +644,7 @@
             </a>
 
             <!-- Override -->
-            <a class="card-wrapper" href="docs/manifest/overview">
+            <a class="card-wrapper" href="docs/manifest/lb-web-service/#environments">
               <div class="card">
                 <div class="logo">
                   <span class="twemoji">
@@ -661,7 +661,7 @@
             </a>
 
             <!-- Customize -->
-            <a class="card-wrapper" href="docs/concepts/pipelines">
+            <a class="card-wrapper" href="docs/commands/pipeline-init/">
               <div class="card">
                 <div class="logo">
                   <span class="twemoji">
@@ -695,8 +695,8 @@
             <h3>Operations is part of the workflow</h3>
             <p>
               Modeling, provisioning, and deploying services are only part of the application lifecycle for the developer. 
-              Copilot also supports workflows around troubleshooting and debugging to help when things go wrong. <a href="docs/commands/service/svc-logs/">Tail
-              your logs</a> or <a href="docs/commands/service/svc-status/">view the health</a> of your services 
+              Copilot also supports workflows around troubleshooting and debugging to help when things go wrong. <a href="docs/commands/svc-logs/">Tail
+              your logs</a> or <a href="docs/commands/svc-status/">view the health</a> of your services 
               from the comfort of your terminal.
             </p>
           </div>
@@ -715,7 +715,7 @@
 
           <!-- Tasks -->
           <div class="responsive-grid">
-            <a class="card-wrapper" href="docs/concepts/tasks">
+            <a class="card-wrapper" href="docs/commands/task-run/">
               <div class="card">
                 <div class="logo">
                   <span class="twemoji">
@@ -739,7 +739,7 @@
               </div>
             </a>
 
-            <a class="card-wrapper" href="docs/concepts/tasks">
+            <a class="card-wrapper" href="docs/commands/svc-status/">
               <div class="card">
                 <div class="logo">
                   <span class="twemoji">
