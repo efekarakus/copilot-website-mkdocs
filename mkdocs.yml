@@ -66,8 +66,9 @@ nav:
       - Settings:
         - version: docs/commands/version.md
         - completion: docs/commands/completion.md
-
-
+  - Community:
+      - Get Involved: community/get-involved.md
+      - Guides and resources: community/guides.md
 theme:
   name: material
   custom_dir: site/overrides
