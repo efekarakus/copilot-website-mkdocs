@@ -31,7 +31,7 @@ By default, the AWS Copilot CLI passes in some default environment variables for
 
 ## How do I add my own Environment Variables?
 
-Adding your own environment variable is easy. You can add them directly to your [manifest](docs/manifest/overview) in the `variables` section. The following snippet will pass a environment variable called `LOG_LEVEL` to your service, with the value set to `debug`. 
+Adding your own environment variable is easy. You can add them directly to your [manifest](/docs/manifest/overview) in the `variables` section. The following snippet will pass a environment variable called `LOG_LEVEL` to your service, with the value set to `debug`. 
 
 ```yaml
 # in copilot/{service name}/manifest.yml 
@@ -58,4 +58,4 @@ Here's a quick guide showing you how to add environment variables to your app by
 
 ## How do I know the name of my DynamoDB table, S3 bucket, RDS database, etc?
 
-When using the Copilot CLI to provision additional AWS resources, such as DynamoDB tables, S3 buckets, Databases, etc, any output values will be passed in as environment variables to your app. For more information, check out the [additional resources guide](docs/developing/additional-aws-resources). 
+When using the Copilot CLI to provision additional AWS resources, such as DynamoDB tables, S3 buckets, Databases, etc, any output values will be passed in as environment variables to your app. For more information, check out the [additional resources guide](/docs/developing/additional-aws-resources/). 

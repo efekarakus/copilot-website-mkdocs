@@ -130,7 +130,7 @@ Specify a minimum and maximum bound for the number of tasks your service should 
 <span class="parent-field">count.</span><a id="count-cpu-percentage" href="#count-cpu-percentage" class="field">`cpu_percentage`</a> <span class="type">Integer</span>  
 Scale up or down based on the average CPU your service should maintain.  
 
-<span class="parent-field">count.</span><a id="count-memory-percentage" href="count-memory-percentage" class="field">`memory_percentage`</a> <span class="type">Integer</span>  
+<span class="parent-field">count.</span><a id="count-memory-percentage" href="#count-memory-percentage" class="field">`memory_percentage`</a> <span class="type">Integer</span>  
 Scale up or down based on the average memory your service should maintain.  
 
 <div class="separator"></div>

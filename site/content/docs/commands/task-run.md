@@ -47,21 +47,33 @@ Generally, the steps involved in task run are:
   --task-role string               Optional. The role for the task to use.
 ```
 ## Example
-#### Run a task using your local Dockerfile. 
+Run a task using your local Dockerfile. 
 You will be prompted to specify a task group name and an environment for the tasks to run in.
+```
+$ copilot task run --follow
+```
 
-```$ copilot task run --follow```
-#### Run a task named "db-migrate" in the "test" environment under the current workspace.
-```$ copilot task run -n db-migrate --env test --follow```
+Run a task named "db-migrate" in the "test" environment under the current workspace.
+```
+$ copilot task run -n db-migrate --env test --follow
+```
 
-#### Run 4 tasks with 2GB memory, an existing image, and a custom task role.
-```$ copilot task run --num 4 --memory 2048 --image=rds-migrate --task-role migrate-role --follow```
+Run 4 tasks with 2GB memory, an existing image, and a custom task role.
+```
+$ copilot task run --num 4 --memory 2048 --image=rds-migrate --task-role migrate-role --follow
+```
 
-#### Run a task with environment variables.
-```$ copilot task run --env-vars name=myName,user=myUser```
+Run a task with environment variables.
+```
+$ copilot task run --env-vars name=myName,user=myUser
+```
 
-#### Run a task using the current workspace with specific subnets and security groups.
-```$ copilot task run --subnets subnet-123,subnet-456 --security-groups sg-123,sg-456```
+Run a task using the current workspace with specific subnets and security groups.
+```
+$ copilot task run --subnets subnet-123,subnet-456 --security-groups sg-123,sg-456
+```
 
-#### Run a task with a command.
-```$ copilot task run --command "python migrate-script.py"```
+Run a task with a command.
+```
+$ copilot task run --command "python migrate-script.py"
+```

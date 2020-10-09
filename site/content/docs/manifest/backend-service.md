@@ -46,7 +46,7 @@ The name of your service.
 <div class="separator"></div>
 
 <a id="type" href="#type" class="field">`type`</a> <span class="type">String</span>  
-The architecture type for your service. A [Load balanced web service](/docs/concepts/services/#load-balanced-web-service) is an internet-facing service that's behind a load balancer, orchestrated by Amazon ECS on AWS Fargate.  
+The architecture type for your service. [Backend services](/docs/concepts/services/#backend-service) is not reachable from the internet, but can be reached with [service discovery](/docs/developing/service-discovery/) from your other services.
 
 <div class="separator"></div>
 
@@ -133,7 +133,7 @@ Specify a minimum and maximum bound for the number of tasks your service should 
 <span class="parent-field">count.</span><a id="count-cpu-percentage" href="#count-cpu-percentage" class="field">`cpu_percentage`</a> <span class="type">Integer</span>  
 Scale up or down based on the average CPU your service should maintain.  
 
-<span class="parent-field">count.</span><a id="count-memory-percentage" href="count-memory-percentage" class="field">`memory_percentage`</a> <span class="type">Integer</span>  
+<span class="parent-field">count.</span><a id="count-memory-percentage" href="#count-memory-percentage" class="field">`memory_percentage`</a> <span class="type">Integer</span>  
 Scale up or down based on the average memory your service should maintain.  
 
 <div class="separator"></div>

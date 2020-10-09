@@ -6,7 +6,7 @@ Additional AWS resources, referred as "addons" in the CLI, are any additional AW
 
 Copilot provides the following commands to help you create certain kinds of addons:
 
-* [`storage init`](docs/commands/storage-init) will create a DynamoDB table or S3 bucket.  
+* [`storage init`](/docs/commands/storage-init/) will create a DynamoDB table or S3 bucket.  
 
 You can run `copilot storage init` from your workspace and be guided through some questions to help you set up these resources.
 
@@ -30,7 +30,7 @@ And you want to add a custom DynamoDB table to `webhook`. Then under the `webhoo
         │   └── mytable-ddb.yaml
         └── manifest.yaml
 ```
-Typically each file under the `addons/` directory represents a separate addon and is represented as an AWS CloudFormation (CFN) [template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html). For example, if we want to also add an S3 bucket addon to our service then we could either run `storage init` or create our own custom, separate `mybucket-s3.yaml` file.
+Typically each file under the `addons/` directory represents a separate addon and is represented as an [AWS CloudFormation (CFN) template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html). For example, if we want to also add an S3 bucket addon to our service then we could either run `storage init` or create our own custom, separate `mybucket-s3.yaml` file.
  
 When your service gets deployed, Copilot merges all these files into a single AWS CloudFormation template and creates a nested stack under your service's stack.
 
@@ -39,6 +39,7 @@ An addon template can be any valid CloudFormation template.
 However, Copilot will pass by default the `App`, `Env` and `Name` [Parameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html) for you to customize your resource properties with [Conditions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/conditions-section-structure.html) or [Mappings](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/mappings-section-structure.html) if you wish to.
 
 If you need to access your [Resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resources-section-structure.html) from your ECS task, make sure to:
+
 1. Define an [IAM ManagedPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html) resource in your template that holds the permissions for your task and add an [Output](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html) so that the permission is injected to your ECS Task Role.
 2. Create an [Output](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html) for any value that you want to be injected as an environment variable to your ECS tasks.
 
@@ -107,7 +108,8 @@ Outputs:
 Copilot will include this template as a nested stack under your service on your next release!
 
 !!! info
-    We recommend following [Amazon IAM best practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html) while defining AWS Managed Policies for the additional resources, including:  
-    1. [Grant least privilege](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#grant-least-privilege) to the policies defined in your addons/ directory.  
-    2. [Use policy conditions for extra security](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#use-policy-conditions) to restrict your policies to access only the resources defined in your `addons/` directory.   
+    We recommend following [Amazon IAM best practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html) while defining AWS Managed Policies for the additional resources, including:
+    
+    * [Grant least privilege](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#grant-least-privilege) to the policies defined in your addons/ directory.  
+    * [Use policy conditions for extra security](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#use-policy-conditions) to restrict your policies to access only the resources defined in your `addons/` directory.   
 

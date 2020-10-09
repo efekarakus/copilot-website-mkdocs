@@ -76,7 +76,7 @@ environments:
   prod:
     count: 2               # Number of tasks to run for the "test" environment.
 ```
-To learn about the specification of manifest files, see the [manifests](/docs/manifests/overview) page.
+To learn about the specification of manifest files, see the [manifests](/docs/manifest/overview) page.
 
 ## Deploying a Service
 
